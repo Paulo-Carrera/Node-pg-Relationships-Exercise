@@ -4,7 +4,7 @@ require("dotenv").config();
 const { Client } = require("pg");
 
 let db = new Client({
-    connectionString: `postgres://paulo:P@ulo445@localhost:5432/biztime`
+    connectionString: `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
   });
   
 
